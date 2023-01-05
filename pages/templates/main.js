@@ -1,32 +1,19 @@
-import { Box, Button, Flex, Heading, IconButton, Link } from "@chakra-ui/react";
-import { FaTwitter } from 'react-icons/fa'
+import { Box, Button, Center, Circle, Flex, Heading, HStack, Icon, IconButton, Link, Spacer, Text } from "@chakra-ui/react";
+import { FaBell, FaCog, FaEnvelope, FaHome, FaMailBulk, FaPersonBooth, FaTwitter, FaUser } from 'react-icons/fa'
+import NavbarLink from "../../components/navbarlink";
 
 export default function Main({ children }) {
 	return(
-		<Flex
-		w='100vw'
-		minH='100vh'
-		justifyContent='center' >
-			<Box
-			p={4}
-			borderRight="1px solid" >
-				<Link
-				as={IconButton}
-				icon={<FaTwitter/>}
-				href="https://google.com"
-				borderRadius="100%"
-				size="1.25em" />
-			</Box>
-			<Box
-			w='500px'
-			borderRight="1px solid" >
-				<Heading
-				as="h1"
-				borderBottom="1px solid"
-				p={4} >
-					Home
-				</Heading>
-			</Box>
-		</Flex>
+		<>
+			{/* Navbar */}
+			<Flex width="100vw" justifyContent="center">
+				<NavbarLink href="#" icon={FaHome}>Home</NavbarLink>
+				<NavbarLink href="#" icon={FaBell}>Notifications</NavbarLink>
+				<NavbarLink href="#" icon={FaEnvelope}>Messages</NavbarLink>
+				<NavbarLink href="#" icon={FaUser}>Profile</NavbarLink>
+				<NavbarLink href="#" icon={FaCog}>Settings</NavbarLink>
+			</Flex>
+		</>
 	)
 }
+

@@ -1,0 +1,21 @@
+.container {
+	justify-content: left!important;
+	padding: 12px!important;
+	font-stretch: 0;
+	overflow: hidden;
+	transition: 0.25s all!important;
+	width: 32px;
+}
+
+.text {
+	padding-left: 4px;
+}
+
+.container:hover {
+	margin: auto;
+	width: 200px;
+}
+
+.link {
+	margin: auto;
+}
